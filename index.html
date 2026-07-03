@@ -31,7 +31,7 @@
   /* NAV */
   .nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:0 6%;height:72px;background:rgba(8,13,22,.55);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);border-bottom:1px solid transparent;transition:background .3s,border-color .3s,height .3s}
   .nav.scrolled{background:rgba(7,11,18,.82);border-bottom-color:var(--line);height:64px}
-  .nav-logo img{height:40px;display:block}
+  .nav-logo img{height:46px;display:block}
   .nav-right{display:flex;align-items:center;gap:2.4rem}
   .nav-links{display:flex;gap:2.1rem;list-style:none}
   .nav-links a{position:relative;color:var(--tx-soft);text-decoration:none;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;font-family:var(--mono);transition:color .2s}
@@ -147,13 +147,18 @@
 
   /* FOOTER */
   .footer{background:#05080e;padding:2.2rem 6%;display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(120,170,230,.08);gap:1.2rem;flex-wrap:wrap}
-  .footer-logo img{height:26px;opacity:.5;display:block}
+  .footer-logo img{height:30px;opacity:.5;display:block}
   .footer-links{display:flex;gap:1.6rem}
   .footer-links a{font-family:var(--mono);font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--tx-faint);text-decoration:none;transition:color .2s}
   .footer-links a:hover{color:var(--electric)}
   .footer-copy{font-family:var(--mono);font-size:.63rem;color:rgba(255,255,255,.25);letter-spacing:.06em}
 
   a:focus-visible,button:focus-visible{outline:2px solid var(--electric);outline-offset:3px;border-radius:4px}
+
+  /* desktop: enlarge hero banner (phone untouched) */
+  @media(min-width:900px){
+    .hero-logo{width:min(760px,62vw)}
+  }
 
   @media(max-width:768px){
     .nav-links{display:none}
@@ -180,7 +185,7 @@
 
 <nav class="nav" id="nav">
   <a href="#home" class="nav-logo" aria-label="North Current Group home">
-    <img src="ncglogo33.png" alt="North Current Group">
+    <img src="ncnav.png" alt="North Current Group">
   </a>
   <div class="nav-right">
     <ul class="nav-links">
@@ -287,7 +292,7 @@
 </section>
 
 <footer class="footer">
-  <div class="footer-logo"><img src="ncglogo33.png" alt="North Current Group"></div>
+  <div class="footer-logo"><img src="ncnav.png" alt="North Current Group"></div>
   <div class="footer-links">
     <a href="#divisions">Divisions</a>
     <a href="#ar-demo">AR Demo</a>
