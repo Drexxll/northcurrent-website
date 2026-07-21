@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>North Current Media — Facebook Marketing That Books Jobs</title>
+<meta name="description" content="Facebook marketing for contractors, restaurants, and local service businesses in the Twin Cities. Booked jobs and full tables — not likes.">
+<link rel="icon" href="ncnav.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0A1118;
+  --ink-2:#101623;
+  --ink-3:#171E2E;
+  --line:rgba(167,139,250,.16);
+  --text:#ECEBF4;
+  --text-dim:#9A9AB0;
+  --accent:#A78BFA;        /* aurora violet — Media current */
+  --accent-deep:#6D4FD0;
+  --display:'Barlow Condensed',sans-serif;
+  --body:'Barlow',sans-serif;
+  --mono:'IBM Plex Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+nav{position:sticky;top:0;z-index:50;background:rgba(10,17,24,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;gap:28px;height:64px}
+.nav-in img{height:36px;width:36px}
+.nav-brand{font-family:var(--display);font-weight:700;font-size:1.25rem;letter-spacing:.06em;text-transform:uppercase}
+.nav-brand span{color:var(--accent)}
+.nav-links{margin-left:auto;display:flex;gap:22px;font-size:.85rem;font-family:var(--mono);color:var(--text-dim)}
+.nav-links a:hover,.nav-links a:focus-visible{color:var(--accent)}
+.nav-links a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+@media(max-width:640px){.nav-links a.hide-m{display:none}}
+
+header{padding:96px 0 72px;position:relative;overflow:hidden}
+.eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.22em;color:var(--accent);text-transform:uppercase;margin-bottom:20px}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(3rem,7.5vw,5.2rem);line-height:.95;text-transform:uppercase;letter-spacing:.01em;max-width:15ch}
+.lede{margin-top:26px;font-size:1.2rem;color:var(--text-dim);max-width:56ch}
+.lede strong{color:var(--text);font-weight:600}
+
+.current{margin:44px 0 0;height:42px;width:100%;overflow:visible}
+.current path{fill:none;stroke:var(--accent);stroke-width:2.5;opacity:.9;filter:drop-shadow(0 0 8px rgba(167,139,250,.55))}
+.current .under{stroke:var(--accent-deep);stroke-width:1;opacity:.5;filter:none}
+@media(prefers-reduced-motion:no-preference){
+  .current path{stroke-dasharray:1200;stroke-dashoffset:1200;animation:flow 2.4s ease forwards}
+  .current .under{animation-delay:.35s}
+  @keyframes flow{to{stroke-dashoffset:0}}
+}
+
+section{padding:80px 0}
+h2{font-family:var(--display);font-weight:700;font-size:clamp(2rem,4.5vw,3rem);text-transform:uppercase;line-height:1;margin-bottom:14px}
+.sub{color:var(--text-dim);max-width:60ch;margin-bottom:44px}
+
+/* who it's for */
+.who{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--ink-3);border:1px solid var(--line);border-radius:14px;padding:30px 26px}
+.card h3{font-family:var(--display);font-size:1.5rem;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.card p{color:var(--text-dim);font-size:.98rem}
+.card .outcome{display:block;margin-top:16px;font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;color:var(--text);text-transform:uppercase;border-top:1px solid var(--line);padding-top:14px}
+.card .outcome::before{content:"Outcome: ";color:var(--accent-deep)}
+@media(max-width:800px){.who{grid-template-columns:1fr}}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.step{border:1px solid var(--line);border-radius:14px;padding:30px 26px;background:linear-gradient(160deg,var(--ink-2),var(--ink))}
+.step h3{font-family:var(--display);font-size:1.5rem;text-transform:uppercase;margin-bottom:10px}
+.step h3 span{color:var(--accent);margin-right:8px}
+.step p{color:var(--text-dim);font-size:.98rem}
+@media(max-width:800px){.steps{grid-template-columns:1fr}}
+
+/* belief block */
+.belief{border-left:3px solid var(--accent);padding:6px 0 6px 28px;max-width:64ch}
+.belief p{font-size:1.25rem;line-height:1.55}
+.belief p strong{color:var(--accent)}
+
+.cta{background:var(--ink-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center;padding:88px 24px}
+.cta h2{margin-bottom:12px}
+.cta p{color:var(--text-dim);margin-bottom:34px}
+.btn{display:inline-block;font-family:var(--display);font-weight:700;font-size:1.15rem;text-transform:uppercase;letter-spacing:.05em;background:var(--accent);color:var(--ink);padding:16px 38px;border-radius:10px;transition:transform .15s ease,box-shadow .15s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(167,139,250,.35)}
+.btn:focus-visible{outline:3px solid var(--text);outline-offset:3px}
+.btn.ghost{background:transparent;color:var(--accent);border:1px solid var(--accent);margin-left:14px}
+.cta .contact-line{margin-top:26px;font-family:var(--mono);font-size:.85rem;color:var(--text-dim)}
+.cta .contact-line a{color:var(--accent)}
+@media(max-width:560px){.btn.ghost{margin-left:0;margin-top:14px}}
+
+footer{padding:44px 0;font-family:var(--mono);font-size:.78rem;color:var(--text-dim)}
+.foot{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center}
+.foot a:hover{color:var(--accent)}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-in">
+    <a href="index.html" aria-label="North Current home"><img src="ncnav.png" alt="North Current badge"></a>
+    <a href="index.html" class="nav-brand">North Current <span>Media</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html" class="hide-m">Services</a>
+      <a href="construction.html" class="hide-m">Construction</a>
+      <a href="#cta">Get customers</a>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <p class="eyebrow">Facebook marketing · Twin Cities metro</p>
+    <h1>Your next customer is scrolling right now</h1>
+    <p class="lede">They're on Facebook tonight, a few miles from your business, about to hire <strong>somebody</strong>. North Current Media makes sure it's you — with campaigns built to produce <strong>booked jobs and full tables</strong>, not likes.</p>
+    <svg class="current" viewBox="0 0 1080 42" preserveAspectRatio="none" aria-hidden="true">
+      <path class="under" d="M0,26 C120,10 220,38 340,24 C460,10 560,36 680,22 C800,8 900,34 1080,20"/>
+      <path d="M0,22 C130,6 230,36 350,22 C470,8 570,34 690,20 C810,6 910,32 1080,16"/>
+    </svg>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Built for businesses like yours</h2>
+    <p class="sub">We don't do everything for everyone. We do Facebook, for local businesses whose customers live within driving distance.</p>
+    <div class="who">
+      <div class="card">
+        <h3>Contractors</h3>
+        <p>Your best work sells itself — once people see it. We put your finished projects in front of homeowners in your service area at the exact moment they're planning theirs.</p>
+        <span class="outcome">A calendar full of estimates</span>
+      </div>
+      <div class="card">
+        <h3>Restaurants & bars</h3>
+        <p>A slow Tuesday isn't a demand problem — it's an awareness problem. We put your food, your specials, and your events in front of locals deciding where to go tonight.</p>
+        <span class="outcome">Seats filled on your slow nights</span>
+      </div>
+      <div class="card">
+        <h3>Local services</h3>
+        <p>When a pipe bursts or a lawn dies, people hire whoever they've seen. We make sure your name is the one your neighborhood already recognizes when the need hits.</p>
+        <span class="outcome">The phone rings first for you</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>How we work</h2>
+    <div class="steps">
+      <div class="step">
+        <h3><span>→</span>We build it</h3>
+        <p>Ads built around what actually makes customers act — the result they want, shown in your work. No stock photos, no generic templates.</p>
+      </div>
+      <div class="step">
+        <h3><span>→</span>We run it</h3>
+        <p>Targeting dialed to your service area and your ideal customer. We watch the numbers daily and move budget to what's producing.</p>
+      </div>
+      <div class="step">
+        <h3><span>→</span>You see it</h3>
+        <p>Plain-English reporting: what we spent, what came in, what it cost per lead. If you can't tell whether it's working, we've failed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="belief">
+      <p>Nobody hires a contractor because of a feature list, and nobody picks a restaurant off a menu PDF. People buy the <strong>after</strong> — the finished kitchen, the great night out, the problem gone. Every ad we make sells the after.</p>
+    </div>
+  </div>
+</section>
+
+<div class="cta" id="cta">
+  <h2>Stop being the best-kept secret in town</h2>
+  <p>Tell us what a great month looks like for your business. We'll tell you — honestly — whether Facebook can get you there.</p>
+  <a class="btn" href="mailto:kevin@northcurrentgroup.net?subject=Facebook%20marketing%20for%20my%20business">Email us</a>
+  <a class="btn ghost" href="tel:+16513469913">Call (651) 346-9913</a>
+  <p class="contact-line">Kevin Jensen · North Current Media · <a href="mailto:kevin@northcurrentgroup.net">kevin@northcurrentgroup.net</a></p>
+</div>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 North Current Group LLC · Ramsey, MN</span>
+    <span><a href="index.html">Home</a> · <a href="services.html">Services</a> · <a href="construction.html">Construction</a> · <a href="https://www.facebook.com/profile.php?id=61590329800013" target="_blank" rel="noopener">Facebook</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
