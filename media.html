@@ -33,12 +33,25 @@ img{max-width:100%}
 nav{position:sticky;top:0;z-index:50;background:rgba(10,17,24,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .nav-in{display:flex;align-items:center;gap:28px;height:64px}
 .nav-in img{height:36px;width:36px}
-.nav-brand{font-family:var(--display);font-weight:700;font-size:1.25rem;letter-spacing:.06em;text-transform:uppercase}
+.nav-brand{font-family:var(--display);font-weight:700;font-size:1.25rem;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
 .nav-brand span{color:var(--accent)}
 .nav-links{margin-left:auto;display:flex;gap:22px;font-size:.85rem;font-family:var(--mono);color:var(--text-dim)}
+.nav-links a{white-space:nowrap}
 .nav-links a:hover,.nav-links a:focus-visible{color:var(--accent)}
 .nav-links a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-@media(max-width:640px){.nav-links a.hide-m{display:none}}
+@media(max-width:760px){
+  .nav-in{gap:12px}
+  .nav-brand{font-size:1.02rem;letter-spacing:.04em}
+  .nav-links{gap:13px;font-size:.7rem}
+  .nav-links a.hide-m{display:none}
+}
+@media(max-width:400px){
+  .nav-in{gap:9px}
+  .nav-in img{height:30px;width:30px}
+  .nav-brand{font-size:.92rem}
+  .nav-brand span{display:none}
+  .nav-links{gap:10px;font-size:.64rem}
+}
 
 header{padding:96px 0 72px;position:relative;overflow:hidden}
 .eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.22em;color:var(--accent);text-transform:uppercase;margin-bottom:20px}
@@ -104,7 +117,7 @@ footer{padding:44px 0;font-family:var(--mono);font-size:.78rem;color:var(--text-
     <a href="index.html" aria-label="North Current home"><img src="ncnav.png" alt="North Current badge"></a>
     <a href="index.html" class="nav-brand">North Current <span>Media</span></a>
     <div class="nav-links">
-      <a href="index.html">Home</a>
+      <a href="index.html" class="hide-m">Home</a>
       <a href="services.html" class="hide-m">Services</a>
       <a href="construction.html" class="hide-m">Construction</a>
       <a href="https://www.facebook.com/profile.php?id=61590329800013" target="_blank" rel="noopener">Facebook</a>
